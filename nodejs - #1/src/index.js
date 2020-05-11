@@ -1,5 +1,5 @@
 const express = require('express');
-const { uuid, isUuid } = require('uuidv4');
+const { uuid } = require('uuidv4');
 
 const app = express();
 
@@ -17,18 +17,7 @@ function logRequests(request, response, next) {
   return next();
 }
 
-function validateId(request, response, next) {
-  const { id } = request.parms;
-
-  if(!isUuid(id)) {
-    return response.status(400).json({ error: "ID invalid!" });
-  }
-
-  return next();
-}
-
 app.use(logRequests);
-app.use('/projects/:id', validateId);
 
 app.get('/projects', (request, response) => {
   const { title } = request.query;
