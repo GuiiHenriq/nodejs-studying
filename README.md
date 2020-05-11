@@ -1,2 +1,2 @@
 # NodeJS
-Repositório criado para armazenar estudo NodeJS
+Repositório criado para armazenar estudos de NodeJS & Typescript
