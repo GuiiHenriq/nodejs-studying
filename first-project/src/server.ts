@@ -7,5 +7,5 @@ app.get('/', (request, response) => {
 });
 
 app.listen(3333, () => {
-  console.log('Back-end rodando na porta 333!');
+  console.log('Back-end rodando na porta 3333!');
 });
